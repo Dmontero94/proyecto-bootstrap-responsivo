@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Proyecto Responsivo de Bootstrap - Single Page</title>
+    <title>Bootstrap Pro: Diseño Web Responsivo Elegante</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -14,10 +14,52 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        /* CSS simple para el placeholder de la imagen si no usas una real */
-        .img-fluid {
-            max-width: 100%;
-            height: auto;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .bg-primary {
+            background-color: #0056b3 !important;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .card {
+            border: none;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 300px;
+            width: 100%;
+        }
+
+        .footer-link-hover:hover {
+            text-decoration: underline !important;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -25,100 +67,132 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Bootstrap Pro</a>
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-magic me-2"></i>Bootstrap Pro
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#bienvenida">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#grid">Grid</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#componentes">Componentes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#bienvenida"><i
+                                    class="fas fa-home me-1"></i> Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#grid"><i class="fas fa-th me-1"></i> Grid</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#componentes"><i
+                                    class="fas fa-puzzle-piece me-1"></i> Componentes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto"><i class="fas fa-envelope me-1"></i>
+                                Contacto</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <section id="bienvenida" class="py-5 bg-light">
+    <section id="bienvenida" class="py-5 bg-white shadow-sm">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 order-md-0">
-                    <img src="https://via.placeholder.com/600x400/007bff/ffffff?text=Responsive+Design"
-                        class="img-fluid rounded mx-auto d-block shadow-lg" alt="Diseño Responsivo"
-                        style="max-height: 400px;">
+                    <img src="https://aukera.es/blog/imagenes/imagen11.png" class="img-fluid rounded shadow-lg"
+                        alt="Diseño Responsivo en dispositivos" style="max-height: 400px;">
                 </div>
                 <div class="col-md-6 order-md-1 mt-4 mt-md-0">
-                    <h1 class="display-4 text-center text-md-start">El poder de la Responsividad</h1>
-                    <p class="lead text-center text-md-start mb-4">
-                        Bootstrap nos permite construir sitios web con diseño **Mobile-First**. El uso del sistema de
-                        grid y clases utilitarias es clave para crear layouts que se adaptan a cualquier dispositivo.
+                    <h1 class="display-4 text-center text-md-start fw-bold">El poder de la Responsividad</h1>
+                    <p class="lead text-center text-md-start mb-4 text-secondary"> Bootstrap nos permite construir
+                        sitios web con diseño **Mobile-First**. El uso del sistema de grid y clases utilitarias es clave
+                        para crear layouts que se adaptan a cualquier dispositivo.
                     </p>
                     <div class="d-grid gap-2 d-md-block text-center text-md-start">
-                        <a class="btn btn-primary btn-lg" href="#grid" role="button">Explorar el Grid</a>
+                        <a class="btn btn-primary btn-lg rounded-pill px-4" href="#grid" role="button">Explorar el Grid
+                            <i class="fas fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="grid" class="py-5">
+    <section id="grid" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5 text-primary">Dominando el Sistema de Grid</h2>
+            <h2 class="text-center mb-5 text-primary fw-bold">Dominando el Sistema de Grid</h2>
             <div class="row g-4">
                 <div class="col-12 col-md-4 col-lg-3">
-                    <div class="p-4 border bg-secondary text-white text-center rounded shadow-sm">
-                        <h4 class="h5">Móvil a Escala</h4>
-                        <p class="mb-0">col-12 | col-md-4 | **col-lg-3**</p>
+                    <div
+                        class="p-4 border border-primary bg-white text-dark text-center rounded shadow-sm h-100 d-flex flex-column justify-content-center">
+                        <h4 class="h5 fw-bold text-primary">Móvil a Escala</h4>
+                        <p class="mb-0 text-muted">col-12 | col-md-4 | **col-lg-3**</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 col-lg-3">
-                    <div class="p-4 border bg-secondary text-white text-center rounded shadow-sm">
-                        <h4 class="h5">Doble en Tablet</h4>
-                        <p class="mb-0">col-12 | col-md-4 | **col-lg-3**</p>
+                    <div
+                        class="p-4 border border-primary bg-white text-dark text-center rounded shadow-sm h-100 d-flex flex-column justify-content-center">
+                        <h4 class="h5 fw-bold text-primary">Doble en Tablet</h4>
+                        <p class="mb-0 text-muted">col-12 | col-md-4 | **col-lg-3**</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 col-lg-3">
-                    <div class="p-4 border bg-secondary text-white text-center rounded shadow-sm">
-                        <h4 class="h5">Columna Adaptable</h4>
-                        <p class="mb-0">col-12 | col-md-4 | **col-lg-3**</p>
+                    <div
+                        class="p-4 border border-primary bg-white text-dark text-center rounded shadow-sm h-100 d-flex flex-column justify-content-center">
+                        <h4 class="h5 fw-bold text-primary">Columna Adaptable</h4>
+                        <p class="mb-0 text-muted">col-12 | col-md-4 | **col-lg-3**</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-3">
-                    <div class="p-4 border bg-secondary text-white text-center rounded shadow-sm">
-                        <h4 class="h5">Sólo Desktop</h4>
-                        <p class="mb-0">col-12 | **col-lg-3**</p>
+                    <div
+                        class="p-4 border border-primary bg-white text-dark text-center rounded shadow-sm h-100 d-flex flex-column justify-content-center">
+                        <h4 class="h5 fw-bold text-primary">Solo Desktop</h4>
+                        <p class="mb-0 text-muted">col-12 | **col-lg-3**</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="componentes" class="py-5 bg-light">
+    <section id="componentes" class="py-5 bg-white">
         <div class="container">
-            <h2 class="text-center mb-5">Componentes Clave de Bootstrap</h2>
+            <h2 class="text-center mb-5 text-primary fw-bold">Componentes Clave de Bootstrap</h2>
             <div class="row">
                 <div class="col-lg-6 mb-4">
-                    <h3 class="h4 mb-3 text-primary">Carrusel</h3>
-                    <div id="carouselExampleIndicators" class="carousel slide shadow-lg" data-bs-ride="carousel">
+                    <h3 class="h4 mb-3 text-primary"><i class="fas fa-images me-2"></i> Carrusel Dinámico</h3>
+                    <div id="carouselExampleIndicators" class="carousel slide shadow-lg rounded"
+                        data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                                 class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                                 aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
                         </div>
-                        <div class="carousel-inner">
+                        <div class="carousel-inner rounded">
                             <div class="carousel-item active">
-                                <img src="https://via.placeholder.com/600x300/28a745/ffffff?text=Vista+1"
-                                    class="d-block w-100" alt="Slide 1">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="d-block w-100" alt="Código y desarrollo">
+                                <div
+                                    class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-pill p-2 mb-3">
+                                    <h5>Desarrollo Web</h5>
+                                    <p>La base de todo proyecto digital.</p>
+                                </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="https://via.placeholder.com/600x300/dc3545/ffffff?text=Vista+2"
-                                    class="d-block w-100" alt="Slide 2">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="d-block w-100" alt="Reunión de equipo">
+                                <div
+                                    class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-pill p-2 mb-3">
+                                    <h5>Colaboración Eficaz</h5>
+                                    <p>Trabajando juntos para el éxito.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://bxbucket.blob.core.windows.net/bxbucket/hubinnovacion/uploads/2025/5/HUBIT-Articulo-ingenieria-Impulsando-innovacion-con-codigo-abierto-herramientas-y-buenas-practicas-Cabecera.jpg"
+                                    class="d-block w-100" alt="Concepto de programación">
+                                <div
+                                    class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded-pill p-2 mb-3">
+                                    <h5>Innovación y Código</h5>
+                                    <p>Creando soluciones del mañana.</p>
+                                </div>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -135,24 +209,66 @@
                 </div>
 
                 <div class="col-lg-6 mb-4">
-                    <h3 class="h4 mb-3 text-primary">Tarjetas y Botones</h3>
-                    <div class="card shadow-lg">
+                    <h3 class="h4 mb-3 text-primary"><i class="fas fa-id-card-alt me-2"></i> Tarjetas y Modal
+                        Interactivo</h3>
+
+                    <div class="card shadow-lg rounded mb-3">
                         <div class="card-body">
-                            <h5 class="card-title">Diseño de Tarjeta Responsiva</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Contenedores de contenido flexibles.</h6>
+                            <h5 class="card-title fw-bold text-dark">Diseño de Tarjeta Responsiva</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Añade información detallada sin saturar la vista.
+                            </h6>
                             <p class="card-text">
-                                Las tarjetas son ideales para agrupar contenido y se integran perfectamente con el
-                                sistema de grid.
+                                Usa el botón a continuación para ver una **funcionalidad extra** implementada con el
+                                componente Modal.
                             </p>
-                            <a href="#" class="btn btn-warning">Botón Principal</a>
-                            <a href="#" class="btn btn-outline-info">Más Info</a>
+
+                            <button type="button" class="btn btn-primary rounded-pill me-2" data-bs-toggle="modal"
+                                data-bs-target="#infoModal">
+                                Ver Detalles con Modal
+                            </button>
+
+                            <a href="#" class="btn btn-outline-secondary rounded-pill">Saber Más</a>
                         </div>
                     </div>
-                    <div class="alert alert-success mt-3" role="alert">
-                        ¡Éxito! Componentes integrados correctamente.
+
+                    <div class="alert alert-info alert-dismissible fade show rounded shadow-sm" role="alert">
+                        <i class="fas fa-info-circle me-2"></i> ¡Genial! Has integrado varios componentes de Bootstrap
+                        con éxito.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header bg-primary text-white">
+                                <h5 class="modal-title" id="infoModalLabel"><i class="fas fa-cogs me-2"></i>
+                                    Funcionalidad Extra (Modal)</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>¡Has activado un componente Modal de Bootstrap!</p>
+                                <p>Esta es una **funcionalidad extra** que permite mostrar contenido adicional,
+                                    formularios de contacto, o mensajes de confirmación de forma elegante y sin recargar
+                                    la página.</p>
+                                <h6>Requisitos cumplidos:</h6>
+                                <ul>
+                                    <li>**Componente Modal:** Ventana emergente interactiva.</li>
+                                    <li>**Interacción:** Activado por un botón dentro de la tarjeta.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Aceptar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     </section>
 
@@ -161,37 +277,38 @@
             <div class="row text-center text-md-start">
 
                 <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Acerca del Proyecto</h5>
-                    <p>Página de una sola vista construida para demostrar la habilidad en el uso de Bootstrap 5 y diseño
-                        responsivo.</p>
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning"><i
+                            class="fas fa-laptop-code me-2"></i>Bootstrap Pro</h5>
+                    <p class="text-light">Proyecto de demostración para explorar y aplicar los principios de diseño web
+                        responsivo con Bootstrap 5.</p>
                 </div>
 
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contacto</h5>
-                    <p><i class="fas fa-home me-3"></i> [Tu Ubicación o Ciudad]</p>
-                    <p><i class="fas fa-envelope me-3"></i> tu.email@ejemplo.com</p>
+                    <h5 class="text-uppercase mb-4 fw-bold text-warning">Contacto</h5>
+                    <p><i class="fas fa-home me-3"></i> Heredia, Costa Rica</p>
+                    <p><i class="fas fa-envelope me-3"></i> dmonteromo@ucenfotec.ac.cr</p>
                 </div>
 
-                <hr class="my-3">
-
+                <hr class="my-3 text-white-50">
                 <div class="row align-items-center">
                     <div class="col-md-7 col-lg-8">
-                        <p class="text-center text-md-start">© 2024 Creado con Bootstrap | Todos los derechos
-                            reservados.</p>
+                        <p class="text-center text-md-start text-light">© 2024 Creado con ❤️ por Daniela M. Todos los
+                            derechos reservados.</p>
                     </div>
                     <div class="col-md-5 col-lg-4">
                         <div class="text-center text-md-end">
                             <ul class="list-unstyled list-inline">
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 20px;"><i
-                                            class="fab fa-twitter"></i></a>
+                                    <a href="#" class="btn-floating btn-sm text-white footer-link-hover"
+                                        style="font-size: 20px;"><i class="fab fa-twitter"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn-floating btn-sm text-white" style="font-size: 20px;"><i
-                                            class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="btn-floating btn-sm text-white footer-link-hover"
+                                        style="font-size: 20px;"><i class="fab fa-linkedin-in"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="TU_REPOSITORIO_GITHUB" class="btn-floating btn-sm text-white"
+                                    <a href="TU_REPOSITORIO_GITHUB"
+                                        class="btn-floating btn-sm text-white footer-link-hover"
                                         style="font-size: 20px;"><i class="fab fa-github"></i></a>
                                 </li>
                             </ul>
